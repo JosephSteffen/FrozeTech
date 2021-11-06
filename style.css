@@ -8,25 +8,23 @@ body{
 
 /* Query targeting small phones and tablets */
 @media screen and (max-width: 700px){
-	.stickynav div{
+	.navcontainer{
 		position: -webkit-sticky; /** webkit for Safari browser **/
 		position: sticky;
-		background-color: grey;
-	}
-
-	.stickynav li{
-		color: white;
-		text-align: center;
+		top: 0;
 		background-color:rgb(139, 139, 139);
-		list-style-type: none;
-		display: block;
-		float: left;
-		padding: 6px;
-		margin-left: 10px;
-		margin-bottom: 10px;
 	}
 
-	.stickynav a{
+	.navcontainer ul{
+		list-style-type: none;
+	}
+	.navcontainer li{
+		color: white;
+		display: inline;
+		margin-right: 30px;
+	}
+
+	.navcontainer a{
 		text-decoration: none;
 	}
 
