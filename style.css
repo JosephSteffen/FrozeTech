@@ -1,0 +1,52 @@
+a, a:visited, a:hover, a:active {
+	color: inherit;
+  }
+
+body{
+	text-align: center;
+}
+
+/* Query targeting small phones and tablets */
+@media screen and (max-width: 700px){
+	.stickynav div{
+		position: -webkit-sticky; /** webkit for Safari browser **/
+		position: sticky;
+		background-color: grey;
+	}
+
+	.stickynav li{
+		color: white;
+		text-align: center;
+		background-color:rgb(139, 139, 139);
+		list-style-type: none;
+		display: block;
+		float: left;
+		padding: 6px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+
+	.stickynav a{
+		text-decoration: none;
+	}
+
+}
+
+/*Query targeting tablets and larger devices */
+@media screen and (min-width: 701px){
+	#logo{
+		width: 100%;
+		height: auto;
+		float: right;
+		padding-left: 250px;
+		display: none;
+	}
+	
+}
+
+@media screen and (min-width: 1024px){
+	
+	.dd-content a:hover{
+		background-color: aqua;
+	}
+}
