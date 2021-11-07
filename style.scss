@@ -1,0 +1,72 @@
+a, a:visited, a:hover, a:active {
+	color: inherit;
+  }
+
+body{
+	text-align: center;
+	background: white;
+    margin: 0px 0px;
+}
+
+p{
+    margin: auto 10px;
+}
+
+h1, h2, h3, h4{
+    margin: 5px 10px;
+}
+
+
+/* Query targeting small phones and tablets */
+@media screen and (max-width: 700px){
+
+	.navcontainer{
+		position: -webkit-sticky; /** webkit for Safari browser **/
+		position: sticky;
+		top: 0;
+		background:rgba(41, 56, 104, 0.925);
+	}
+
+	.navcontainer ul{
+		list-style-type: none;
+        height: 50px;
+        margin-top: 0px;
+	}
+	.navcontainer li{
+		color: white;
+		display: inline;
+		margin-right: 30px;
+	}
+
+	.navcontainer a{
+		text-decoration: none;
+	}
+
+    h2{
+        background: rgb(41, 56, 104);
+        border-radius: 20px;
+        color: rgb(255, 255, 255);
+        margin: 10px 50px;
+
+    }
+
+}
+
+/*Query targeting tablets and larger devices */
+@media screen and (min-width: 701px){
+	#logo{
+		width: 100%;
+		height: auto;
+		float: right;
+		padding-left: 250px;
+		display: none;
+	}
+	
+}
+
+@media screen and (min-width: 1024px){
+	
+	.dd-content a:hover{
+		background-color: aqua;
+	}
+}
