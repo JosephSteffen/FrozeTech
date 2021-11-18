@@ -3,8 +3,6 @@ a, a:visited, a:hover, a:active {
 }
 
 body {
-  text-align: center;
-  background: white;
   margin: 0px 0px;
 }
 
@@ -14,6 +12,7 @@ p {
 
 h1, h2, h3, h4 {
   margin: 5px 10px;
+  text-align: center;
 }
 
 * {
@@ -21,19 +20,16 @@ h1, h2, h3, h4 {
           box-sizing: border-box;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -53,18 +49,15 @@ h1, h2, h3, h4 {
           user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -75,7 +68,6 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -84,7 +76,6 @@ h1, h2, h3, h4 {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -101,7 +92,6 @@ h1, h2, h3, h4 {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -127,26 +117,64 @@ h1, h2, h3, h4 {
   }
 }
 
+#logo-text {
+  background-image: -webkit-gradient(linear, left top, right top, from(blue), to(white));
+  background-image: linear-gradient(90deg, blue, white);
+  -webkit-background-clip: text;
+  /* Added for browsers that require webkit prefix to function */
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  -webkit-animation: glitch 3s 1s infinite;
+          animation: glitch 3s 1s infinite;
+}
+
+/* keyframes for logo text */
+@-webkit-keyframes glitch {
+  1% {
+    -webkit-transform: rotateX(10deg) skewX(90deg);
+            transform: rotateX(10deg) skewX(90deg);
+  }
+  2% {
+    -webkit-transform: rotateX(0deg) skewX(0deg);
+            transform: rotateX(0deg) skewX(0deg);
+  }
+}
+@keyframes glitch {
+  1% {
+    -webkit-transform: rotateX(10deg) skewX(90deg);
+            transform: rotateX(10deg) skewX(90deg);
+  }
+  2% {
+    -webkit-transform: rotateX(0deg) skewX(0deg);
+            transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
 /* Query targeting small phones and tablets */
 @media screen and (max-width: 700px) {
-  .navcontainer {
+  #navcontainer {
     position: -webkit-sticky;
     /** webkit for Safari browser **/
     position: sticky;
     top: 0;
     background: rgba(41, 56, 104, 0.925);
+    z-index: 1;
   }
-  .navcontainer ul {
+  #navcontainer ul {
     list-style-type: none;
     height: 50px;
-    margin-top: 0px;
+    text-align: center;
+    padding-top: .75rem;
+    text-transform: uppercase;
   }
-  .navcontainer li {
+  #navcontainer li {
     color: white;
     display: inline;
     margin-right: 30px;
   }
-  .navcontainer a {
+  #navcontainer a {
     text-decoration: none;
   }
   h2 {
@@ -171,6 +199,12 @@ h1, h2, h3, h4 {
 @media screen and (min-width: 1024px) {
   .dd-content a:hover {
     background-color: aqua;
+  }
+  .slideshow-container {
+    display: none;
+  }
+  .dot {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
