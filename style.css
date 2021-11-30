@@ -20,8 +20,12 @@ h1, h2, h3, h4 {
           box-sizing: border-box;
 }
 
+footer {
+  text-align: center;
+}
+
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 800px;
   position: relative;
   margin: auto;
 }
@@ -126,8 +130,8 @@ h1, h2, h3, h4 {
   color: transparent;
   margin-bottom: 2.5rem;
   margin-top: 2.5rem;
-  -webkit-animation: glitch 3s 1s infinite;
-          animation: glitch 3s 1s infinite;
+  -webkit-animation: glitch 2s 1s infinite;
+          animation: glitch 2s 1s infinite;
 }
 
 /* keyframes for logo text */
@@ -153,7 +157,7 @@ h1, h2, h3, h4 {
 }
 
 /* Query targeting small phones and tablets */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1023px) {
   #navcontainer {
     position: -webkit-sticky;
     /** webkit for Safari browser **/
@@ -161,21 +165,26 @@ h1, h2, h3, h4 {
     top: 0;
     background: rgba(41, 56, 104, 0.925);
     z-index: 1;
+    font-size: 12px;
   }
   #navcontainer ul {
     list-style-type: none;
     height: 50px;
     text-align: center;
-    padding-top: .75rem;
+    padding-top: 1rem;
     text-transform: uppercase;
+    margin-top: 0px;
   }
   #navcontainer li {
     color: white;
     display: inline;
-    margin-right: 30px;
+    margin-right: 20px;
   }
   #navcontainer a {
     text-decoration: none;
+  }
+  .fa.fa-bars {
+    display: none;
   }
   h2 {
     background: #293868;
@@ -185,25 +194,49 @@ h1, h2, h3, h4 {
   }
 }
 
-/*Query targeting tablets and larger devices */
-@media screen and (min-width: 701px) {
-  #logo {
-    width: 100%;
-    height: auto;
-    float: right;
-    padding-left: 250px;
-    display: none;
-  }
+/*Query targeting tablets and larger devices to be implemented later
+@media screen and (min-width: 701px){
+	#logo{
+		width: 100%;
+		height: auto;
+		float: right;
+		padding-left: 250px;
+		display: none;
+	}
+	
 }
-
+*/
 @media screen and (min-width: 1024px) {
-  .dd-content a:hover {
-    background-color: aqua;
-  }
-  .slideshow-container {
+  #navcontainer {
+    top: 0;
+    background: rgba(41, 56, 104, 0.925);
+    z-index: 1;
     display: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 10%;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    position: absolute;
   }
-  .dot {
+  #navcontainer ul {
+    list-style-type: none;
+  }
+  #navcontainer li {
+    color: white;
+    margin-top: 30px;
+  }
+  #navcontainer li:nth-child(2n - 1) {
+    color: #cfcfcf;
+  }
+  #navcontainer li:last-child {
+    margin-bottom: 30px;
+  }
+  #navcontainer a {
+    text-decoration: none;
+  }
+  .fa.fa-bars {
     display: none;
   }
 }
