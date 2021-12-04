@@ -1,13 +1,18 @@
+i {
+  font-family: 'FontAwesome';
+}
+
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
 
-body {
-  margin: 0px 0px;
-}
-
 p {
   margin: auto 10px;
+  text-align: center;
+}
+
+body {
+  margin: 0px 0px;
 }
 
 h1, h2, h3, h4 {
@@ -22,10 +27,49 @@ h1, h2, h3, h4 {
 
 footer {
   text-align: center;
+  background-color: #293868;
+  color: white;
 }
 
+/* Page logo styles */
+#logo-text {
+  background-image: -webkit-gradient(linear, left top, right top, from(blue), to(white));
+  background-image: linear-gradient(90deg, blue, white);
+  -webkit-background-clip: text;
+  /* Added for browsers that require webkit prefix to function */
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  -webkit-animation: glitch 2s 1s infinite;
+          animation: glitch 2s 1s infinite;
+}
+
+/* keyframes for logo text */
+@-webkit-keyframes glitch {
+  1% {
+    -webkit-transform: rotateX(10deg) skewX(90deg);
+            transform: rotateX(10deg) skewX(90deg);
+  }
+  2% {
+    -webkit-transform: rotateX(0deg) skewX(0deg);
+            transform: rotateX(0deg) skewX(0deg);
+  }
+}
+@keyframes glitch {
+  1% {
+    -webkit-transform: rotateX(10deg) skewX(90deg);
+            transform: rotateX(10deg) skewX(90deg);
+  }
+  2% {
+    -webkit-transform: rotateX(0deg) skewX(0deg);
+            transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+/* First slideshow styles */
 .slideshow-container {
-  max-width: 800px;
+  max-width: 400px;
   position: relative;
   margin: auto;
 }
@@ -121,43 +165,131 @@ footer {
   }
 }
 
-#logo-text {
-  background-image: -webkit-gradient(linear, left top, right top, from(blue), to(white));
-  background-image: linear-gradient(90deg, blue, white);
-  -webkit-background-clip: text;
-  /* Added for browsers that require webkit prefix to function */
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem;
-  -webkit-animation: glitch 2s 1s infinite;
-          animation: glitch 2s 1s infinite;
+/* Second slideshow styles */
+.slideshow-container2 {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
 }
 
-/* keyframes for logo text */
-@-webkit-keyframes glitch {
-  1% {
-    -webkit-transform: rotateX(10deg) skewX(90deg);
-            transform: rotateX(10deg) skewX(90deg);
-  }
-  2% {
-    -webkit-transform: rotateX(0deg) skewX(0deg);
-            transform: rotateX(0deg) skewX(0deg);
-  }
-}
-@keyframes glitch {
-  1% {
-    -webkit-transform: rotateX(10deg) skewX(90deg);
-            transform: rotateX(10deg) skewX(90deg);
-  }
-  2% {
-    -webkit-transform: rotateX(0deg) skewX(0deg);
-            transform: rotateX(0deg) skewX(0deg);
-  }
+.mySlides2 {
+  display: none;
 }
 
-/* Query targeting small phones and tablets */
+.prev2, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #ee0101;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.next2 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev2:hover, .next2:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.text2 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext2 {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active2, .dot2:hover {
+  background-color: #717171;
+}
+
+/* Query targeting phones and tablets */
 @media screen and (max-width: 1023px) {
+  #navcontainer {
+    top: 0;
+    background: rgba(41, 56, 104, 0.925);
+    z-index: 1;
+    display: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 10%;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    position: absolute;
+  }
+  #navcontainer ul {
+    list-style-type: none;
+  }
+  #navcontainer li {
+    color: white;
+    margin-top: 30px;
+  }
+  #navcontainer li:nth-child(2n - 1) {
+    color: #cfcfcf;
+  }
+  #navcontainer li:last-child {
+    margin-bottom: 30px;
+  }
+  #navcontainer a {
+    text-decoration: none;
+  }
+  .fa.fa-bars {
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(white));
+    background-image: linear-gradient(blue, white);
+    -webkit-background-clip: text;
+    /* Added for browsers that require webkit prefix to function */
+    background-clip: text;
+    color: transparent;
+    display: inline;
+  }
+  #id {
+    border-style: none;
+    outline: none;
+  }
+}
+
+/* Query targeting laptops and desktops */
+@media screen and (min-width: 1024px) {
   #navcontainer {
     position: -webkit-sticky;
     /** webkit for Safari browser **/
@@ -194,7 +326,7 @@ footer {
   }
 }
 
-/*Query targeting tablets and larger devices to be implemented later
+/*Query targeting tablets to be implemented later
 @media screen and (min-width: 701px){
 	#logo{
 		width: 100%;
@@ -206,38 +338,4 @@ footer {
 	
 }
 */
-@media screen and (min-width: 1024px) {
-  #navcontainer {
-    top: 0;
-    background: rgba(41, 56, 104, 0.925);
-    z-index: 1;
-    display: none;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 10%;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    position: absolute;
-  }
-  #navcontainer ul {
-    list-style-type: none;
-  }
-  #navcontainer li {
-    color: white;
-    margin-top: 30px;
-  }
-  #navcontainer li:nth-child(2n - 1) {
-    color: #cfcfcf;
-  }
-  #navcontainer li:last-child {
-    margin-bottom: 30px;
-  }
-  #navcontainer a {
-    text-decoration: none;
-  }
-  .fa.fa-bars {
-    display: none;
-  }
-}
 /*# sourceMappingURL=style.css.map */
