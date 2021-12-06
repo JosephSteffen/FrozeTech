@@ -62,10 +62,11 @@ function showSlides2(n) {
 }
 
 function menu() {  
-  var drop = document.getElementById("navcontainer");  
-  if(drop.style.display ==="none") {  
-     drop.style.display ="flex";  
-  } else {  
-     drop.style.display ="none";  
-  }   
+  var drop = document.getElementById("navcontainer");
+  if(drop.style.display ==="none") {
+     drop.style.display ="block"; 
+    }
+  else { 
+    drop.style.display ="none"; 
+  }
 }  
