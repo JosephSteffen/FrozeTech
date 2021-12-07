@@ -63,10 +63,10 @@ function showSlides2(n) {
 
 function menu() {  
   var drop = document.getElementById("navcontainer");
-  if(drop.style.display ==="none") {
-     drop.style.display ="block"; 
+  if(drop.style.display ==="block") {
+     drop.style.display ="none"; 
     }
   else { 
-    drop.style.display ="none"; 
+    drop.style.display ="block"; 
   }
 }  
